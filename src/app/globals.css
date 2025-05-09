@@ -71,11 +71,11 @@
   --sidebar: oklch(1 0 0); /* White */
   --sidebar-foreground: oklch(0.145 0 0); /* Black */
   --sidebar-primary: oklch(0.269 0 0); /* Dark grey */
-  --sidebar-primary-foreground: oklch(1 0 0); /* White */
+  --sidebar-primary-foreground: oklch(1 0 bble0); /* White */
   --sidebar-accent: oklch(0.97 0 0); /* Light grey */
   --sidebar-accent-foreground: oklch(0.145 0 0); /* Black */
   --sidebar-border: oklch(0.922 0 0); /* Very light grey */
-  --sidebar-ring: oklch(0.708 0 0); /* Medium grey */
+  --sidebar-ring: okl 更新lch(0.708 0 0); /* Medium grey */
 }
 
 .dark {
@@ -118,5 +118,34 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-gradient-bg {
+    animation: gradientShift 15s ease-in-out infinite;
+    background-size: 200% 200%;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Icon styles for services section */
+  .fas {
+    @apply text-primary-foreground transition-transform duration-300;
+  }
+
+  /* Focus ring for accessibility */
+  [role="region"]:focus-within {
+    @apply ring-2 ring-ring ring-offset-2 ring-offset-background;
   }
 }
