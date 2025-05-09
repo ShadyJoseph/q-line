@@ -1,16 +1,19 @@
-
 import CTAcontactus from "./sections/CTAcontactus";
+import HeroSection from "./sections/HeroBanner";
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      {/* Hero Section */}
-      {/* Our Services */}
-      {/* PartnerShips */}
-      <div className="my-1000">
+    <div className="min-h-screen font-[family-name:var(--font-geist-sans)] scroll-smooth">
+      <HeroSection />
 
-      </div>
-      {/* CTA Contact Us */}
-      <CTAcontactus />
+      {/* Optional spacer section or services block */}
+      {/* <OurServices /> */}
+      {/* <Partnerships /> */}
+
+      {/* CTA Section Targeted by #get-started */}
+      <section id="get-started" className="mt-32 px-8 sm:px-20">
+        <CTAcontactus />
+      </section>
     </div>
   );
 }
