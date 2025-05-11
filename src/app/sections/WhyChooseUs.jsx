@@ -37,7 +37,7 @@ const cardVariants = {
 
 export default function WhyChooseUs() {
     return (
-        <section className="w-full bg-neutral-900 min-h-screen flex items-center justify-center py-20 px-0">
+        <section className="w-full bg-neutral-900 flex items-center justify-center py-20 px-0 mb-5">
             <div className="w-full flex flex-col items-center justify-center">
                 <motion.h2
                     initial={{ opacity: 0, y: -30 }}

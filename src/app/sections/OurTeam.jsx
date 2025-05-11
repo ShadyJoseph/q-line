@@ -77,13 +77,13 @@ const OurTeam = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2"
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 md:gap-1.5"
                 >
                     {teamMembers.map((member, index) => (
                         <motion.div
                             key={index}
                             variants={itemVariants}
-                            whileHover={{ scale: 1.05 }}
+                            whileHover={{ scale: 1, zIndex: 1, ...(typeof window !== 'undefined' && window.innerWidth >= 768 ? { scale: 1.02 } : {}) }}
                             transition={{ duration: 0.3 }}
                             className="relative group bg-gray-200 h-64 w-full flex items-center justify-center overflow-hidden"
                         >

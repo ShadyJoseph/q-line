@@ -85,15 +85,11 @@ export default function Values() {
                         <motion.div
                             key={index}
                             variants={itemVariants}
-                            className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-black transition-all duration-300"
+                            className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-black transition-all duration-300 flex flex-col items-center text-center"
                         >
-                            <div className="text-black mb-4">{value.icon}</div>
-                            <h3 className="text-xl font-semibold text-black mb-3">
-                                {value.title}
-                            </h3>
-                            <p className="text-gray-600">
-                                {value.description}
-                            </p>
+                            <div className="text-black mb-4 flex justify-center">{value.icon}</div>
+                            <h3 className="text-xl font-semibold text-black mb-3 text-center">{value.title}</h3>
+                            <p className="text-gray-600">{value.description}</p>
                         </motion.div>
                     ))}
                 </motion.div>

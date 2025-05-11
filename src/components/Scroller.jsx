@@ -1,3 +1,4 @@
+"use client";
 import styles from './Scroller.module.css';
 import Item from './Item';
 import { motion } from 'framer-motion';
@@ -13,9 +14,9 @@ const Scroller = () => {
   const loopImages = [...images, ...images];
 
   return (
-    <>
+    <div className={styles.scrollerSection}>
       <motion.h1
-        className={styles.marg + ' ' + styles.headingSS}
+        className={styles.marg + ' ' + styles.headingSS + ' ' + styles.scrollerTitle}
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -50,7 +51,7 @@ const Scroller = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

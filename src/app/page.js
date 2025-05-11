@@ -1,16 +1,17 @@
+import Scroller from "@/components/Scroller";
+import HeroSection from "./sections/HeroBanner";
+import ServicesSection from "./sections/OurServices";
+import WhyChooseUs from "./sections/WhyChooseUs";
+import Map from "@/components/Map";
 
-import CTAcontactus from "./sections/CTAcontactus";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      {/* Hero Section */}
-      {/* Our Services */}
-      {/* PartnerShips */}
-      <div className="my-1000">
-
-      </div>
-      {/* CTA Contact Us */}
-      <CTAcontactus />
-    </div>
+    <main className="flex flex-col min-h-screen w-full">
+      <HeroSection />
+      <ServicesSection />
+      <WhyChooseUs />
+      <Scroller />
+      <Map />
+    </main>
   );
 }

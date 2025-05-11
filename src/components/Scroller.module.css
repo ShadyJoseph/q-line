@@ -1,5 +1,5 @@
 .wrapper {
-  margin-top: -60px;
+  margin: -10px 0;
   /* removed or set to a smaller value */
   width: 100%;
   max-width: 100%;
@@ -15,7 +15,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #222A34;
-  margin: 0 0 8px 0;
+  margin: 0px 0 16px 0;
   text-align: center;
 }
 
@@ -102,6 +102,7 @@
 /* Media query for smaller screens (mobile) */
 @media (max-width: 768px) {
   .wrapper {
+    margin: 4px 0;
     width: 100%;
     /* Ensure the wrapper takes full width */
     margin-inline: 0;
