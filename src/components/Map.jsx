@@ -1,6 +1,5 @@
 'use client';
 
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import MotionDiv from "../app/MotionDiv";
 
 const Map = () => (

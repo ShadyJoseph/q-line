@@ -86,7 +86,7 @@ export default function WhyChooseUs() {
                     transition={{ duration: 0.6, delay: 0.5 }}
                     className="flex justify-center mt-8"
                 >
-                    <Link href="/get-started" passHref>
+                    <Link href="/contact" passHref>
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.97 }}
