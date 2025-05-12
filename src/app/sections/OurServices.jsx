@@ -4,29 +4,57 @@ import { Button } from "@/components/ui/button";
 import MotionDiv from "../MotionDiv";
 import MotionLink from "../MotionLink";
 import { services } from "../data";
+import { motion } from "framer-motion";
 
 export default function ServicesSection() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { duration: 1.2, ease: [0.6, -0.05, 0.01, 0.99], staggerChildren: 0.25 },
+      transition: {
+        duration: 0.4,
+        ease: [0.4, 0, 0.2, 1],
+        staggerChildren: 0.1,
+        delay: 0,
+      },
     },
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99], type: "spring", bounce: 0.2 } },
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: [0.4, 0, 0.2, 1],
+        type: "spring",
+        stiffness: 140,
+      },
+    },
+  };
+
+  const childVariants = {
+    hidden: { opacity: 0, x: -10 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.2,
+        ease: [0.4, 0, 0.2, 1],
+      },
+    },
   };
 
   return (
-    <section className="relative bg-background text-foreground py-12 sm:py-16 lg:py-24 overflow-hidden">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#4a4a4a10_1px,transparent_1px),linear-gradient(to_bottom,#4a4a4a10_1px,transparent_1px)] bg-[size:24px_24px] opacity-20" />
+    <section className="relative bg-background text-foreground py-12 sm:py-16 lg:py-20 overflow-hidden">
+      {/* Refined background pattern aligned with HeroSection */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff1a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff1a_1px,transparent_1px)] bg-[size:20px_20px] opacity-10 dark:bg-[linear-gradient(to_right,#1f29371a_1px,transparent_1px),linear-gradient(to_bottom,#1f29371a_1px,transparent_1px)]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background to-foreground/5" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <MotionDiv
-          className="text-center mb-12 sm:mb-16 lg:mb-20"
+          className="text-center mb-10 sm:mb-12 lg:mb-16"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -34,13 +62,14 @@ export default function ServicesSection() {
           aria-label="Our Solutions"
         >
           <MotionDiv variants={cardVariants}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-muted-foreground dark:from-foreground dark:to-muted-foreground transition-all duration-1000">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter bg-clip-text text-black">
               Our Solutions
             </h2>
           </MotionDiv>
           <MotionDiv variants={cardVariants}>
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mt-4 max-w-md sm:max-w-lg md:max-w-2xl mx-auto leading-relaxed">
-              Discover our suite of innovative services designed to empower your business with advanced technology.
+            <p className="text-base sm:text-lg md:text-xl text-foreground mt-3 max-w-md sm:max-w-lg md:max-w-2xl mx-auto leading-relaxed font-light">
+              Explore our cutting-edge services crafted to elevate your business
+              with advanced technology.
             </p>
           </MotionDiv>
         </MotionDiv>
@@ -54,31 +83,68 @@ export default function ServicesSection() {
           {services.map((service) => (
             <MotionDiv
               key={service.id}
-              className="bg-card text-card-foreground rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-border overflow-hidden group focus-within:ring-2 focus-within:ring-ring"
+              className="bg-card text-card-foreground rounded-2xl shadow-md hover:shadow-xl transition-all duration-200 border border-border/50 overflow-hidden group focus-within:ring-2 focus-within:ring-primary/30 dark:focus-within:ring-primary/50"
               variants={cardVariants}
-              whileHover={{ scale: 1.04, rotate: 0.5 }}
-              whileFocus={{ scale: 1.04, rotate: 0.5 }}
+              whileHover={{ scale: 1.03 }}
+              whileFocus={{ scale: 1.03 }}
             >
-              <div className="p-6 sm:p-8">
-                <div className="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-primary text-primary-foreground rounded-full mb-5 transition-transform duration-300 group-hover:scale-110">
-                  <i className={`fas ${service.icon} text-2xl sm:text-3xl`} aria-hidden="true" />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-semibold mb-3 text-foreground">{service.title}</h3>
-                <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">
+              <div className="p-6 sm:p-7">
+                <motion.div
+                  variants={childVariants}
+                  initial="hidden"
+                  animate="visible"
+                  className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-primary/90 text-primary-foreground rounded-full mb-4 transition-transform duration-200 group-hover:scale-105"
+                >
+                  <i
+                    className={`fas ${service.icon} text-xl sm:text-2xl`}
+                    aria-hidden="true"
+                  />
+                </motion.div>
+                <motion.h3
+                  variants={childVariants}
+                  initial="hidden"
+                  animate="visible"
+                  className="text-lg sm:text-xl font-semibold mb-2 text-foreground tracking-tight"
+                >
+                  {service.title}
+                </motion.h3>
+                <motion.p
+                  variants={childVariants}
+                  initial="hidden"
+                  animate="visible"
+                  className="text-foreground text-sm sm:text-base leading-relaxed mb-5"
+                >
                   {service.description}
-                </p>
+                </motion.p>
                 <MotionLink
                   href={service.link}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  whileFocus={{ scale: 1.05 }}
+                  variants={childVariants}
+                  initial="hidden"
+                  animate="visible"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.98 }}
+                  whileFocus={{ scale: 1.03 }}
                   className="inline-block"
                 >
                   <Button
-                    className="bg-primary text-primary-foreground hover:bg-primary/95 dark:hover:bg-primary/90 transition-all duration-300 rounded-lg px-5 sm:px-6 py-2 sm:py-3 shadow-sm hover:shadow-md focus:ring-2 focus:ring-ring font-semibold"
+                    className="relative px-4 sm:px-5 py-2 bg-foreground text-background border border-background rounded-lg font-medium text-sm sm:text-base shadow-sm hover:bg-background hover:text-foreground hover:border-foreground transition-all duration-200 flex items-center gap-2 group"
                     aria-label={`Learn more about ${service.title}`}
                   >
-                    Learn More
+                    <span className="relative z-10">Learn More</span>
+                    <svg
+                      className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200 relative z-10"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
                   </Button>
                 </MotionLink>
               </div>
@@ -86,6 +152,9 @@ export default function ServicesSection() {
           ))}
         </MotionDiv>
       </div>
+
+      {/* Subtle overlay for depth */}
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,var(--background)_80%)] opacity-15" />
     </section>
   );
 }

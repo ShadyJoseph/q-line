@@ -1,11 +1,14 @@
+.scrollerSection {
+  background-color: #171717; /* Tailwind's bg-neutral-900 */
+  padding: 40px 0;
+}
+
 .wrapper {
   margin: -10px 0;
-  /* removed or set to a smaller value */
   width: 100%;
   max-width: 100%;
   margin-inline: 0;
   height: 190px;
-  /* fixed height to accommodate item size */
   overflow: hidden;
   position: relative;
 }
@@ -14,7 +17,7 @@
   font-size: 30px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #222A34;
+  color: #ffffff; /* Changed to white */
   margin: 0px 0 16px 0;
   text-align: center;
 }
@@ -23,7 +26,7 @@
   font-size: 48px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #222A34;
+  color: #ffffff; /* Changed to white */
   text-align: center;
   margin-bottom: 30px;
   margin-top: 0;
@@ -76,11 +79,9 @@
   overflow: hidden;
   flex-shrink: 0;
   margin-right: 10px;
-  /* space between images */
   box-sizing: border-box;
   padding: 20px;
-  /* spacing between image and border */
-  border: 1px solid black;
+  border: 1px solid #ffffff; /* Changed to white for visibility */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,27 +105,19 @@
   .wrapper {
     margin: 4px 0;
     width: 100%;
-    /* Ensure the wrapper takes full width */
     margin-inline: 0;
-    /* Remove side margins to maximize width */
     height: 120px;
-    /* Reduce height for smaller screens */
   }
 
   .item {
     width: 150px;
-    /* Keep item width to fit at least 3 images */
     height: 100px;
-    /* Adjust height proportionally */
     padding: 10px;
-    /* Reduce padding for smaller screens */
     margin-right: 5px;
-    /* Reduce space between images */
   }
 
   .scrollerTrack {
     animation-duration: 20s;
-    /* Speed up animation slightly for smaller screens */
   }
 
   .headingSS {

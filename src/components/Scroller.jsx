@@ -14,9 +14,9 @@ const Scroller = () => {
   const loopImages = [...images, ...images];
 
   return (
-    <div className={styles.scrollerSection}>
+    <div className={`${styles.scrollerSection} bg-neutral-900`}>
       <motion.h1
-        className={styles.marg + ' ' + styles.headingSS + ' ' + styles.scrollerTitle}
+        className={`${styles.marg} ${styles.headingSS} ${styles.scrollerTitle}`}
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
