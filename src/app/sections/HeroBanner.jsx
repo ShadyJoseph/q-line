@@ -20,7 +20,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-background text-foreground overflow-hidden">
+    <section className="relative py-20 flex items-center justify-center bg-background text-foreground overflow-hidden">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4a4a4a10_1px,transparent_1px),linear-gradient(to_BOTTOM,#4a4a4a10_1px,transparent_1px)] bg-[size:24px_24px] opacity-20" />
       <div className="absolute inset-0 bg-gradient-to-br from-muted/10 to-background animate-gradient-bg" />
