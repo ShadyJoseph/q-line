@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import logo from '../../../public/images/LogoBlack.png'
 
 const Footer = () => {
   return (
@@ -11,8 +12,8 @@ const Footer = () => {
           <div className="space-y-6 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start space-x-2">
               <img
-                src="/images/Qlogo.png"
-                alt="Q-Line Logo"
+                src={logo}
+                alt="Q-Line-Logo"
                 className="h-6 w-auto md:h-8"
               />
 
