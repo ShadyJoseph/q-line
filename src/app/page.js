@@ -2,7 +2,7 @@ import Scroller from "@/components/Scroller";
 import HeroSection from "./sections/HeroBanner";
 import ServicesSection from "./sections/OurServices";
 import WhyChooseUs from "./sections/WhyChooseUs";
-import Map from "@/components/Map";
+import Map from "./sections/Map";
 
 export default function Home() {
   return (

@@ -13,7 +13,7 @@ import { usePathname } from "next/navigation";
 
 const NAV_ITEMS = [
   { name: "About Us", href: "/about" },
-  { name: "Contact Us & FAQs", href: "/contact-faqs" },
+  { name: "Contact Us & FAQs", href: "/contact" },
 ];
 
 export function NavBar() {

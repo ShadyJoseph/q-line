@@ -14,6 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en" suppressHydrationWarning>
+            <head>
+                <link rel="icon" type="image/png" href="/images/favicon.png" />
+            </head>
             <body className={`${inter.className} min-h-screen bg-background antialiased`}>
                 <div className="relative flex min-h-screen flex-col">
                     <NavBar />

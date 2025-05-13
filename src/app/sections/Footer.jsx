@@ -27,7 +27,7 @@ const Footer = () => {
               <h3 className="text-lg font-semibold mb-4">Useful Links</h3>
               <ul className="space-y-3">
                 <li>
-                  <a href="/contact-faqs" className="text-gray-600 hover:text-black transition-colors duration-300 inline-block relative group">
+                  <a href="/contact" className="text-gray-600 hover:text-black transition-colors duration-300 inline-block relative group">
                     Contact Us & FAQs
                     <span className="absolute bottom-0 left-0 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                   </a>
