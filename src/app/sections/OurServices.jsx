@@ -1,10 +1,15 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import React from "react";
 import MotionDiv from "../MotionDiv";
-import MotionLink from "../MotionLink";
 import { services } from "../data";
 import { motion } from "framer-motion";
+import * as LucideIcons from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, A11y } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function ServicesSection() {
   const containerVariants = {
@@ -15,7 +20,6 @@ export default function ServicesSection() {
         duration: 0.4,
         ease: [0.4, 0, 0.2, 1],
         staggerChildren: 0.1,
-        delay: 0,
       },
     },
   };
@@ -47,106 +51,148 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="relative bg-white text-foreground py-12 sm:py-16 lg:py-20 overflow-hidden">
-      {/* White background, overlays removed */}
+    <section
+      className="relative bg-gray-50 text-black py-20 sm:py-24 lg:py-32 overflow-hidden"
+      aria-label="Our Printing Solutions"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <MotionDiv
-          className="text-center mb-10 sm:mb-12 lg:mb-16"
+          className="text-center mb-16 sm:mb-20 lg:mb-24"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          role="region"
-          aria-label="Our Solutions"
         >
           <MotionDiv variants={cardVariants}>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter bg-clip-text text-black">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-black font-sans">
               Our Solutions
             </h2>
           </MotionDiv>
           <MotionDiv variants={cardVariants}>
-            <p className="text-base sm:text-lg md:text-xl text-foreground mt-3 max-w-md sm:max-w-lg md:max-w-2xl mx-auto leading-relaxed font-light">
-              Explore our cutting-edge services crafted to elevate your business
-              with advanced technology.
+            <p className="text-lg sm:text-xl lg:text-2xl text-black/70 mt-6 max-w-md sm:max-w-lg lg:max-w-3xl mx-auto leading-relaxed font-light font-sans">
+              Discover Q-Line Print’s services, designed to bring your ideas to
+              life with innovative design and high-quality printing.
             </p>
           </MotionDiv>
         </MotionDiv>
 
         <MotionDiv
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          {services.map((service) => (
-            <MotionDiv
-              key={service.id}
-              className="bg-card text-card-foreground rounded-2xl shadow-md hover:shadow-xl transition-all duration-200 border border-border/50 overflow-hidden group focus-within:ring-2 focus-within:ring-primary/30 dark:focus-within:ring-primary/50"
-              variants={cardVariants}
-              whileHover={{ scale: 1.03 }}
-              whileFocus={{ scale: 1.03 }}
-            >
-              <div className="p-6 sm:p-7">
-                <motion.div
-                  variants={childVariants}
-                  initial="hidden"
-                  animate="visible"
-                  className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-primary/90 text-primary-foreground rounded-full mb-4 transition-transform duration-200 group-hover:scale-105"
+          <Swiper
+            modules={[Navigation, Pagination, A11y]}
+            spaceBetween={24}
+            slidesPerView={1}
+            direction="horizontal"
+            breakpoints={{
+              640: { slidesPerView: 2, spaceBetween: 20 },
+              768: { slidesPerView: 3, spaceBetween: 24 },
+              1280: { slidesPerView: 4, spaceBetween: 32 },
+            }}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
+            pagination={{
+              clickable: true,
+              el: ".swiper-pagination",
+              bulletClass:
+                "swiper-pagination-bullet !bg-black/30 !w-2.5 !h-2.5 !rounded-full !opacity-70",
+              bulletActiveClass: "!bg-black !opacity-100 !scale-125",
+            }}
+            className="relative pb-20 px-4 sm:px-6"
+            aria-label="Services carousel"
+            grabCursor={true}
+            lazyPreloadPrevNext={1}
+            style={{ width: "100%", overflow: "visible" }}
+          >
+            {services.map((service) => {
+              const IconComponent = LucideIcons[service.icon];
+              return (
+                <SwiperSlide
+                  key={service.id}
+                  className="swiper-slide flex justify-center items-center h-full"
                 >
-                  <i
-                    className={`fas ${service.icon} text-xl sm:text-2xl`}
-                    aria-hidden="true"
-                  />
-                </motion.div>
-                <motion.h3
-                  variants={childVariants}
-                  initial="hidden"
-                  animate="visible"
-                  className="text-lg sm:text-xl font-semibold mb-2 text-foreground tracking-tight"
-                >
-                  {service.title}
-                </motion.h3>
-                <motion.p
-                  variants={childVariants}
-                  initial="hidden"
-                  animate="visible"
-                  className="text-foreground text-sm sm:text-base leading-relaxed mb-5"
-                >
-                  {service.description}
-                </motion.p>
-                <MotionLink
-                  href={service.link}
-                  variants={childVariants}
-                  initial="hidden"
-                  animate="visible"
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.98 }}
-                  whileFocus={{ scale: 1.03 }}
-                  className="inline-block"
-                >
-                  <Button
-                    className="relative px-4 sm:px-5 py-2 bg-foreground text-background border border-background rounded-lg font-medium text-sm sm:text-base shadow-sm hover:bg-background hover:text-foreground hover:border-foreground transition-all duration-200 flex items-center gap-2 group"
-                    aria-label={`Learn more about ${service.title}`}
+                  <MotionDiv
+                    className="bg-white text-black rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100/50 overflow-hidden group focus-within:ring-2 focus-within:ring-black/20 w-[95%] max-w-[300px] min-h-[300px] sm:min-h-[320px] lg:min-h-[340px] flex flex-col mx-auto"
+                    variants={cardVariants}
+                    whileHover={{ scale: 1.04, y: -6 }}
+                    whileFocus={{ scale: 1.04, y: -6 }}
                   >
-                    <span className="relative z-10">Learn More</span>
-                    <svg
-                      className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200 relative z-10"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </Button>
-                </MotionLink>
+                    <div className="p-6 sm:p-7 lg:p-8 flex flex-col flex-grow relative">
+                      <motion.div
+                        variants={childVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-black to-gray-800 text-white rounded-full mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:shadow-md"
+                      >
+                        {IconComponent ? (
+                          <IconComponent
+                            className="w-6 h-6 sm:w-7 sm:h-7"
+                            aria-hidden="true"
+                          />
+                        ) : (
+                          <span className="text-xl sm:text-2xl">?</span>
+                        )}
+                      </motion.div>
+                      <motion.h3
+                        variants={childVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="text-lg sm:text-xl font-semibold mb-3 text-black tracking-tight font-sans"
+                      >
+                        {service.title}
+                      </motion.h3>
+                      <motion.p
+                        variants={childVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="text-black/80 text-sm sm:text-base leading-relaxed font-sans flex-grow"
+                      >
+                        {service.description}
+                      </motion.p>
+                    </div>
+                  </MotionDiv>
+                </SwiperSlide>
+              );
+            })}
+            <div className="flex justify-center items-center gap-4 mt-8 relative z-20">
+              <div className="swiper-button-prev !text-white after:!content-[''] !w-12 !h-12 bg-gradient-to-r from-gray-800 to-black !rounded-full !shadow-lg hover:scale-110 transition-all duration-200 flex items-center justify-center">
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
               </div>
-            </MotionDiv>
-          ))}
+              <div className="swiper-button-next !text-white after:!content-[''] !w-12 !h-12 bg-gradient-to-r from-gray-800 to-black !rounded-full !shadow-lg hover:scale-110 transition-all duration-200 flex items-center justify-center">
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div className="swiper-pagination !bottom-[-12px]"></div>
+          </Swiper>
         </MotionDiv>
       </div>
     </section>

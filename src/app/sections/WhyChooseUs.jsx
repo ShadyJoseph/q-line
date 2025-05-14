@@ -4,23 +4,23 @@ import Link from "next/link";
 
 const questions = [
   {
-    q: "Who are you?",
-    a: "Q-Line is a highly regarded provider of integrated printing, marketing, and logistics services.",
+    q: "Who is Q-Line?",
+    a: "Q-Line is an award-winning, family-owned organization specializing in printing, marketing, and logistics services. We supply businesses and educational sectors with high-quality printed materials, books, and custom solutions, driven by a reputation for quality and innovation.",
   },
   {
-    q: "How can you help me?",
-    a: "We help you overcome business challenges by creating powerful solutions for you. Find partners, grow your brand, and let us handle the rest.",
+    q: "What services do you offer?",
+    a: "As your trusted print partner, we simplify your printing needs with a wide range of services, including graphic designing, offset and digital printing, wide format printing, packaging, finishing, and more. From flyers and brochures to stickers and custom boxes, our experienced team delivers innovative solutions to help your brand stand out.",
   },
   {
-    q: "How do you provide support?",
-    a: "We assist businesses at all stages, from market entry to sustaining presence and unlocking growth opportunities.",
+    q: "How can Q-Line help my business?",
+    a: "We guide you through creating stunning designs and managing complex print projects, offering expert support to break through competition and capture your audience’s attention. Whether you’re a local business or a national brand, our resources and innovative approaches drive your success.",
   },
   {
-    q: "What should I do now?",
+    q: "What’s the next step?",
     a: (
       <>
-        Just get in touch! Today to learn more about how Q-Line can help you
-        grow.
+        Contact us today to discover how Q-Line’s tailored printing and
+        marketing solutions can elevate your business!
       </>
     ),
   },
@@ -77,7 +77,7 @@ export default function WhyChooseUs() {
               variants={cardVariants}
               className="group flex items-start gap-4 bg-neutral-900 rounded-xl p-6 mx-auto max-w-xl min-h-[180px]"
             >
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white flex items-center justify-center transition-colors transition-transform duration-300 group-hover:bg-black group-hover:-translate-y-3">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white flex items-center justify-center transition-transform duration-300 group-hover:bg-black group-hover:-translate-y-3">
                 <span className="text-black text-xl font-bold transition-colors duration-300 group-hover:text-white">
                   ?
                 </span>
