@@ -1,7 +1,7 @@
 export const services = [
   {
     id: 1,
-    title: "Cloud Solutions",
+    title: "Cloud Solution",
     description:
       "Leverage our cutting-edge cloud infrastructure to scale your business with unmatched flexibility and security.",
     icon: "fa-cloud",
