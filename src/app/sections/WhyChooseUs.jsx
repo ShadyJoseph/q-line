@@ -61,7 +61,7 @@ export default function WhyChooseUs() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           className="text-lg text-gray-300 text-center mb-12 max-w-2xl"
         >
           Explore the common questions and answers about Q-Line
@@ -96,7 +96,7 @@ export default function WhyChooseUs() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           className="flex justify-center mt-8"
         >
           <Link href="/contact" passHref>
