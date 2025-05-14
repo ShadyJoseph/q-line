@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -87,10 +88,13 @@ const OurTeam = () => {
                             transition={{ duration: 0.3 }}
                             className="relative group bg-gray-200 h-64 w-full flex items-center justify-center overflow-hidden"
                         >
-                            <img
+                            <Image
                                 src={member.img}
                                 alt={member.name}
-                                className="w-full h-full object-cover"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                priority
+                                loading="eager"
                             />
                             <motion.div
                                 initial={{ opacity: 0 }}

@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -10,12 +11,15 @@ const Footer = () => {
           {/* Logo Section */}
           <div className="space-y-6 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start space-x-2">
-              <img
+              <Image
                 src='/images/LogoBlack.png'
                 alt="Q-Line-Logo"
+                width={100}
+                height={32}
                 className="h-6 w-auto md:h-8"
+                priority
+                loading="eager"
               />
-
             </div>
             <p className="text-lg font-semibold">Printing Easy and Fast</p>
           </div>

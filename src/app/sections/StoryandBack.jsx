@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from 'next/image';
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -108,10 +109,13 @@ export default function StoryandBack() {
                             transition={{ duration: 0.3 }}
                             className="col-span-2 h-44 rounded-xl overflow-hidden shadow-md"
                         >
-                            <img
+                            <Image
                                 src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
                                 alt="Workspace 1"
-                                className="w-full h-full object-cover"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                priority
+                                loading="eager"
                             />
                         </motion.div>
                         <motion.div
@@ -120,10 +124,13 @@ export default function StoryandBack() {
                             transition={{ duration: 0.3 }}
                             className="h-32 rounded-xl overflow-hidden shadow-md"
                         >
-                            <img
+                            <Image
                                 src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
                                 alt="Workspace 2"
-                                className="w-full h-full object-cover"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                priority
+                                loading="eager"
                             />
                         </motion.div>
                         <motion.div
@@ -132,10 +139,13 @@ export default function StoryandBack() {
                             transition={{ duration: 0.3 }}
                             className="h-32 rounded-xl overflow-hidden shadow-md"
                         >
-                            <img
+                            <Image
                                 src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
                                 alt="Workspace 3"
-                                className="w-full h-full object-cover"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                priority
+                                loading="eager"
                             />
                         </motion.div>
                     </motion.div>
@@ -176,10 +186,13 @@ export default function StoryandBack() {
                             transition={{ duration: 0.3 }}
                             className="col-span-2 h-44 rounded-xl overflow-hidden shadow-md"
                         >
-                            <img
+                            <Image
                                 src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
                                 alt="Workspace 1"
-                                className="w-full h-full object-cover"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                priority
+                                loading="eager"
                             />
                         </motion.div>
                         <motion.div
@@ -188,10 +201,13 @@ export default function StoryandBack() {
                             transition={{ duration: 0.3 }}
                             className="h-32 rounded-xl overflow-hidden shadow-md"
                         >
-                            <img
+                            <Image
                                 src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
                                 alt="Workspace 2"
-                                className="w-full h-full object-cover"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                priority
+                                loading="eager"
                             />
                         </motion.div>
                         <motion.div
@@ -200,10 +216,13 @@ export default function StoryandBack() {
                             transition={{ duration: 0.3 }}
                             className="h-32 rounded-xl overflow-hidden shadow-md"
                         >
-                            <img
+                            <Image
                                 src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
                                 alt="Workspace 3"
-                                className="w-full h-full object-cover"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                priority
+                                loading="eager"
                             />
                         </motion.div>
                     </motion.div>
@@ -265,10 +284,13 @@ export default function StoryandBack() {
                                     transition={{ duration: 0.3 }}
                                     className="relative h-48 sm:h-56 w-full overflow-hidden rounded-lg"
                                 >
-                                    <img
+                                    <Image
                                         src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
                                         alt="Workspace 1"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        style={{ objectFit: 'cover' }}
+                                        priority
+                                        loading="eager"
                                     />
                                 </motion.div>
                                 <motion.div
@@ -277,10 +299,13 @@ export default function StoryandBack() {
                                     transition={{ duration: 0.3 }}
                                     className="relative h-48 sm:h-56 w-full overflow-hidden rounded-lg"
                                 >
-                                    <img
+                                    <Image
                                         src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
                                         alt="Punch Today"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        style={{ objectFit: 'cover' }}
+                                        priority
+                                        loading="eager"
                                     />
                                 </motion.div>
                             </div>
@@ -291,10 +316,13 @@ export default function StoryandBack() {
                                 transition={{ duration: 0.3 }}
                                 className="flex-1 relative h-100 sm:h-[29rem] w-full overflow-hidden rounded-lg"
                             >
-                                <img
+                                <Image
                                     src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
                                     alt="Plant"
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                    priority
+                                    loading="eager"
                                 />
                             </motion.div>
                         </motion.div>
@@ -318,10 +346,13 @@ export default function StoryandBack() {
                                 transition={{ duration: 0.3 }}
                                 className="flex-1 relative h-100 sm:h-[29rem] w-full overflow-hidden rounded-lg"
                             >
-                                <img
+                                <Image
                                     src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
                                     alt="Team 3"
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                    priority
+                                    loading="eager"
                                 />
                             </motion.div>
                             {/* Stacked 1x2 Images */}
@@ -332,10 +363,13 @@ export default function StoryandBack() {
                                     transition={{ duration: 0.3 }}
                                     className="relative h-48 sm:h-56 w-full overflow-hidden rounded-lg"
                                 >
-                                    <img
+                                    <Image
                                         src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
                                         alt="Team 1"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        style={{ objectFit: 'cover' }}
+                                        priority
+                                        loading="eager"
                                     />
                                 </motion.div>
                                 <motion.div
@@ -344,10 +378,13 @@ export default function StoryandBack() {
                                     transition={{ duration: 0.3 }}
                                     className="relative h-48 sm:h-56 w-full overflow-hidden rounded-lg"
                                 >
-                                    <img
+                                    <Image
                                         src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
                                         alt="Team 2"
-                                        className="w-full h-full object-cover"
+                                        fill
+                                        style={{ objectFit: 'cover' }}
+                                        priority
+                                        loading="eager"
                                     />
                                 </motion.div>
                             </div>
