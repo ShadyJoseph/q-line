@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Loader2, CheckCircle, XCircle, Copy, Check, Mail, Phone, X } from "lucide-react";
 import { motion } from "framer-motion";
-import MotionDiv from "../MotionDiv";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -140,7 +139,6 @@ export default function ContactPage() {
   };
 
   const copyToClipboard = (text, type) => {
-    // Ensure clipboard API is only called after mount
     if (typeof window !== 'undefined' && navigator.clipboard) {
       navigator.clipboard.writeText(text);
       if (type === 'email') {
@@ -175,7 +173,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col animate-gradient-bg">
       {/* Header Section */}
-      <MotionDiv
+      <motion.div
         className="py-12 sm:py-16 text-center bg-card shadow-sm"
         variants={containerVariants}
         initial="hidden"
@@ -193,11 +191,11 @@ export default function ContactPage() {
         >
           We're here to help. Reach out via form, email, or phone.
         </motion.p>
-      </MotionDiv>
+      </motion.div>
 
       {/* Main Content */}
       <main className="flex-1 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-        <MotionDiv
+        <motion.div
           className="w-full max-w-7xl mx-auto grid gap-8 sm:grid-cols-1 lg:grid-cols-2"
           variants={containerVariants}
           initial="hidden"
@@ -205,7 +203,7 @@ export default function ContactPage() {
           viewport={{ once: true }}
         >
           {/* Contact Info Section */}
-          <MotionDiv
+          <motion.div
             className="p-6 sm:p-8 bg-card rounded-xl shadow-lg transition-all duration-300"
             variants={cardVariants}
           >
@@ -289,10 +287,10 @@ export default function ContactPage() {
                 </div>
               </motion.div>
             </motion.div>
-          </MotionDiv>
+          </motion.div>
 
           {/* Form Section */}
-          <MotionDiv
+          <motion.div
             className="p-6 sm:p-8 bg-card rounded-xl shadow-lg"
             variants={cardVariants}
           >
@@ -342,7 +340,7 @@ export default function ContactPage() {
                   Your Message
                 </label>
               </motion.div>
-              <MotionDiv
+              <motion.div
                 variants={buttonVariants}
                 className="flex justify-center"
               >
@@ -377,7 +375,7 @@ export default function ContactPage() {
                     </>
                   )}
                 </motion.button>
-              </MotionDiv>
+              </motion.div>
               {status === 'success' && (
                 <motion.div
                   className="flex items-center gap-2 text-sm p-4 bg-secondary rounded-lg"
@@ -417,8 +415,8 @@ export default function ContactPage() {
                 </motion.div>
               )}
             </form>
-          </MotionDiv>
-        </MotionDiv>
+          </motion.div>
+        </motion.div>
         {status === 'sending' && (
           <motion.div
             className="absolute inset-0 bg-background/50 backdrop-blur-sm flex items-center justify-center"
@@ -432,7 +430,7 @@ export default function ContactPage() {
       </main>
 
       {/* Footer Section */}
-      <MotionDiv
+      <motion.div
         className="py-6 text-center bg-card shadow-sm"
         variants={itemVariants}
         initial="hidden"
@@ -442,7 +440,7 @@ export default function ContactPage() {
         <p className="text-sm text-muted-foreground">
           We aim to respond to all inquiries within 24 hours. Thank you for reaching out!
         </p>
-      </MotionDiv>
+      </motion.div>
     </div>
   );
 }
