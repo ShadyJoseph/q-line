@@ -14,7 +14,7 @@ export async function POST(req) {
     }
 
     const data = await resend.emails.send({
-      from: 'qline-eg.com',
+      from: 'qLine-eg@gmail.com',
       to: 'Emad.h.sarofeem@gmail.com',
       subject: `New message from ${name}`,
       html: `
@@ -26,7 +26,7 @@ export async function POST(req) {
 
     return NextResponse.json({ success: true, data });
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('Error sending email:', error, error.response?.data);
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });
   }
 }
