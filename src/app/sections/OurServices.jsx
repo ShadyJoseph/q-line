@@ -1,9 +1,8 @@
 "use client";
 
-import React from "react";
-import MotionDiv from "../MotionDiv";
-import { services } from "../data";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { services } from "../data";
 import * as LucideIcons from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
@@ -12,6 +11,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export default function ServicesSection() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  // Defer rendering until component mounts to avoid hydration mismatches
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -50,32 +56,46 @@ export default function ServicesSection() {
     },
   };
 
+  // Show loading state until the component is fully loaded
+  if (!isLoaded) {
+    return (
+      <motion.div
+        className="min-h-[300px] bg-gray-50 flex items-center justify-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
+      >
+        <div className="text-black/70 text-lg">Loading...</div>
+      </motion.div>
+    );
+  }
+
   return (
     <section
       className="relative bg-gray-50 text-black py-20 sm:py-24 lg:py-32 overflow-hidden"
       aria-label="Our Printing Solutions"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <MotionDiv
+        <motion.div
           className="text-center mb-16 sm:mb-20 lg:mb-24"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <MotionDiv variants={cardVariants}>
+          <motion.div variants={cardVariants}>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-black font-sans">
               Our Solutions
             </h2>
-          </MotionDiv>
-          <MotionDiv variants={cardVariants}>
+          </motion.div>
+          <motion.div variants={cardVariants}>
             <p className="text-lg sm:text-xl lg:text-2xl text-black/70 mt-6 max-w-md sm:max-w-lg lg:max-w-3xl mx-auto leading-relaxed font-light font-sans">
               Discover Q-Line Print’s services, designed to bring your ideas to
               life with innovative design and high-quality printing.
             </p>
-          </MotionDiv>
-        </MotionDiv>
+          </motion.div>
+        </motion.div>
 
-        <MotionDiv
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -114,7 +134,7 @@ export default function ServicesSection() {
                   key={service.id}
                   className="swiper-slide flex justify-center items-center h-full"
                 >
-                  <MotionDiv
+                  <motion.div
                     className="bg-white text-black rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100/50 overflow-hidden group focus-within:ring-2 focus-within:ring-black/20 w-[95%] max-w-[300px] min-h-[300px] sm:min-h-[320px] lg:min-h-[340px] flex flex-col mx-auto"
                     variants={cardVariants}
                     whileHover={{ scale: 1.04, y: -6 }}
@@ -125,7 +145,7 @@ export default function ServicesSection() {
                         variants={childVariants}
                         initial="hidden"
                         animate="visible"
-                        className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-black to-gray-800 text-white rounded-full mb-6 transition-transform duration-300 group-hover:scale-110 group-hover:shadow-md"
+                        className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-black text-white rounded-full mb-6 transition-shadow duration-300 group-hover:shadow-md"
                       >
                         {IconComponent ? (
                           <IconComponent
@@ -153,14 +173,14 @@ export default function ServicesSection() {
                         {service.description}
                       </motion.p>
                     </div>
-                  </MotionDiv>
+                  </motion.div>
                 </SwiperSlide>
               );
             })}
             <div className="flex justify-center items-center gap-4 mt-8 relative z-20">
-              <div className="swiper-button-prev !text-white after:!content-[''] !w-12 !h-12 bg-gradient-to-r from-gray-800 to-black !rounded-full !shadow-lg hover:scale-110 transition-all duration-200 flex items-center justify-center">
+              <div className="swiper-button-prev !text-white after:!content-[''] !w-10 !h-10 bg-black !rounded-full !shadow-lg hover:scale-110 transition-all duration-200 flex items-center justify-center">
                 <svg
-                  className="w-6 h-6"
+                  className="w-5 h-5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -174,9 +194,9 @@ export default function ServicesSection() {
                   />
                 </svg>
               </div>
-              <div className="swiper-button-next !text-white after:!content-[''] !w-12 !h-12 bg-gradient-to-r from-gray-800 to-black !rounded-full !shadow-lg hover:scale-110 transition-all duration-200 flex items-center justify-center">
+              <div className="swiper-button-next !text-white after:!content-[''] !w-10 !h-10 bg-black !rounded-full !shadow-lg hover:scale-110 transition-all duration-200 flex items-center justify-center">
                 <svg
-                  className="w-6 h-6"
+                  className="w-5 h-5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -193,7 +213,7 @@ export default function ServicesSection() {
             </div>
             <div className="swiper-pagination !bottom-[-12px]"></div>
           </Swiper>
-        </MotionDiv>
+        </motion.div>
       </div>
     </section>
   );

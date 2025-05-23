@@ -1,22 +1,3 @@
-import {
-  Paintbrush,
-  Printer,
-  Zap,
-  Expand,
-  Layers,
-  Box,
-  CheckSquare,
-  Gift,
-  Book,
-  Cube,
-  FileText,
-  Newspaper,
-  Mail,
-  Tag,
-  Pen,
-  Package,
-} from "lucide-react";
-
 export const services = [
   {
     id: 1,

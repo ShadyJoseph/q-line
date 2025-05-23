@@ -1,9 +1,17 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import MotionDiv from "../MotionDiv";
+import { Loader2 } from "lucide-react";
 
 const MapAnimations = ({ children }) => {
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    // Defer rendering until component mounts to avoid hydration mismatches
+    useEffect(() => {
+        setIsLoaded(true);
+    }, []);
+
     // Animation variants for staggered effects
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -29,6 +37,32 @@ const MapAnimations = ({ children }) => {
         },
     };
 
+    const loaderVariants = {
+        hidden: { opacity: 0, scale: 0.5 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                duration: 0.3,
+                ease: [0.4, 0, 0.2, 1],
+            },
+        },
+    };
+
+    // Show loading state until the component is fully loaded
+    if (!isLoaded) {
+        return (
+            <motion.div
+                className="min-h-[300px] bg-background flex items-center justify-center"
+                variants={loaderVariants}
+                initial="hidden"
+                animate="visible"
+            >
+                <Loader2 className="h-10 w-10 text-gray-600 animate-spin" aria-label="Loading map" />
+            </motion.div>
+        );
+    }
+
     return (
         <section className="relative bg-background text-foreground py-12 sm:py-16 lg:py-20 overflow-hidden">
             {/* Refined background pattern aligned with HeroSection */}
@@ -36,7 +70,7 @@ const MapAnimations = ({ children }) => {
             <div className="absolute inset-0 bg-gradient-to-br from-background to-foreground/5" />
 
             <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <MotionDiv
+                <motion.div
                     className="text-center mb-10 sm:mb-12 lg:mb-16"
                     variants={containerVariants}
                     initial="hidden"
@@ -44,17 +78,17 @@ const MapAnimations = ({ children }) => {
                     role="region"
                     aria-label="Our Location"
                 >
-                    <MotionDiv variants={itemVariants}>
+                    <motion.div variants={itemVariants}>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter text-black">
                             Our Location
                         </h2>
-                    </MotionDiv>
-                    <MotionDiv variants={itemVariants}>
+                    </motion.div>
+                    <motion.div variants={itemVariants}>
                         <p className="text-base sm:text-lg md:text-xl text-foreground mt-3 max-w-md sm:max-w-lg md:max-w-2xl mx-auto leading-relaxed font-light">
-                            In the heart of cairo
+                            In the heart of Cairo
                         </p>
-                    </MotionDiv>
-                </MotionDiv>
+                    </motion.div>
+                </motion.div>
 
                 {/* Map container with animation */}
                 <motion.div
@@ -68,7 +102,7 @@ const MapAnimations = ({ children }) => {
                 </motion.div>
 
                 {/* Address */}
-                <MotionDiv
+                <motion.div
                     className="mt-8 text-center px-4 sm:px-6 lg:px-8"
                     variants={itemVariants}
                     initial="hidden"
@@ -82,10 +116,10 @@ const MapAnimations = ({ children }) => {
                         8 Khaled Ibn Al Walid, Sheraton Al Matar, El Nozha, <br />
                         Cairo Governorate 4471141, Egypt
                     </p>
-                </MotionDiv>
+                </motion.div>
             </div>
         </section>
     );
 };
 
-export default MapAnimations; 
+export default MapAnimations;
