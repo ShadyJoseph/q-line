@@ -14,7 +14,7 @@ export async function POST(req) {
     }
 
     const data = await resend.emails.send({
-      from: 'no-reply@qline-eg.com',
+      from: 'Your company <QLIne>',
       to: 'Emad.h.sarofeem@gmail.com',
       subject: `New message from ${name}`,
       html: `
