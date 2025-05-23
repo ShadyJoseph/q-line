@@ -1,15 +1,28 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Loader2, CheckCircle, XCircle, Copy, Check, Mail, Phone, X } from "lucide-react";
+import {
+  Loader2,
+  CheckCircle,
+  XCircle,
+  Copy,
+  Check,
+  Mail,
+  Phone,
+  X,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [status, setStatus] = useState('idle');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -97,51 +110,56 @@ export default function ContactPage() {
   };
 
   const validateForm = () => {
-    if (!formData.name.trim()) return 'Name is required';
-    if (!formData.email.trim()) return 'Email is required';
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) return 'Invalid email format';
-    if (!formData.message.trim()) return 'Message is required';
-    return '';
+    if (!formData.name.trim()) return "Name is required";
+    if (!formData.email.trim()) return "Email is required";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
+      return "Invalid email format";
+    if (!formData.message.trim()) return "Message is required";
+    return "";
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const validationError = validateForm();
     if (validationError) {
-      setStatus('error');
+      setStatus("error");
       setErrorMessage(validationError);
       return;
     }
 
-    setStatus('sending');
-    setErrorMessage('');
+    setStatus("sending");
+    setErrorMessage("");
 
     try {
-      const res = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       const result = await res.json();
 
       if (result.success) {
-        setStatus('success');
-        setFormData({ name: '', email: '', message: '' });
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
       } else {
-        setStatus('error');
-        setErrorMessage(result.error?.message || 'Failed to send message. Please try again.');
+        setStatus("error");
+        setErrorMessage(
+          result.error?.message || "Failed to send message. Please try again."
+        );
       }
     } catch (error) {
-      setStatus('error');
-      setErrorMessage('Network error. Please check your connection and try again.');
+      setStatus("error");
+      setErrorMessage(
+        "Network error. Please check your connection and try again."
+      );
     }
   };
 
   const copyToClipboard = (text, type) => {
-    if (typeof window !== 'undefined' && navigator.clipboard) {
+    if (typeof window !== "undefined" && navigator.clipboard) {
       navigator.clipboard.writeText(text);
-      if (type === 'email') {
+      if (type === "email") {
         setCopiedEmail(true);
         setTimeout(() => setCopiedEmail(false), 2000);
       } else {
@@ -152,8 +170,8 @@ export default function ContactPage() {
   };
 
   const dismissMessage = () => {
-    setStatus('idle');
-    setErrorMessage('');
+    setStatus("idle");
+    setErrorMessage("");
   };
 
   // Show loading spinner until the component is fully loaded
@@ -219,7 +237,8 @@ export default function ContactPage() {
               variants={itemVariants}
               className="text-base sm:text-lg text-muted-foreground mb-8"
             >
-              Our team is ready to assist you. Expect a response within 24 hours.
+              Our team is ready to assist you. Expect a response within 24
+              hours.
             </motion.p>
             <motion.div className="space-y-8" variants={containerVariants}>
               <motion.div
@@ -228,9 +247,13 @@ export default function ContactPage() {
               >
                 <Mail className="h-6 w-6 text-primary flex-shrink-0" />
                 <div>
-                  <span className="text-sm text-muted-foreground block">Email</span>
+                  <span className="text-sm text-muted-foreground block">
+                    Email
+                  </span>
                   <motion.button
-                    onClick={() => copyToClipboard('support@example.com', 'email')}
+                    onClick={() =>
+                      copyToClipboard("support@example.com", "email")
+                    }
                     className="flex items-center gap-2 text-foreground hover:text-primary transition-colors relative group"
                     title="Copy email"
                     whileHover={{ scale: 1.05 }}
@@ -261,9 +284,13 @@ export default function ContactPage() {
               >
                 <Phone className="h-6 w-6 text-primary flex-shrink-0" />
                 <div>
-                  <span className="text-sm text-muted-foreground block">Phone</span>
+                  <span className="text-sm text-muted-foreground block">
+                    Phone
+                  </span>
                   <motion.button
-                    onClick={() => copyToClipboard('+1 (555) 123-4567', 'phone')}
+                    onClick={() =>
+                      copyToClipboard("+1 (555) 123-4567", "phone")
+                    }
                     className="flex items-center gap-2 text-foreground hover:text-primary transition-colors relative group"
                     title="Copy phone number"
                     whileHover={{ scale: 1.05 }}
@@ -305,7 +332,7 @@ export default function ContactPage() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  disabled={status === 'sending'}
+                  disabled={status === "sending"}
                   className="peer w-full h-16 text-lg pt-8 pb-3 px-5 rounded-lg border border-input focus:border-primary focus:ring-2 focus:ring-ring/50 transition-all duration-300 placeholder-transparent disabled:bg-muted disabled:cursor-not-allowed hover:border-primary/50"
                 />
                 <label className="absolute left-5 top-2 text-sm text-muted-foreground peer-placeholder-shown:top-5 peer-placeholder-shown:text-lg peer-placeholder-shown:text-muted-foreground peer-focus:top-2 peer-focus:text-sm peer-focus:text-primary transition-all duration-300">
@@ -320,7 +347,7 @@ export default function ContactPage() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  disabled={status === 'sending'}
+                  disabled={status === "sending"}
                   className="peer w-full h-16 text-lg pt-8 pb-3 px-5 rounded-lg border border-input focus:border-primary focus:ring-2 focus:ring-ring/50 transition-all duration-300 placeholder-transparent disabled:bg-muted disabled:cursor-not-allowed hover:border-primary/50"
                 />
                 <label className="absolute left-5 top-2 text-sm text-muted-foreground peer-placeholder-shown:top-5 peer-placeholder-shown:text-lg peer-placeholder-shown:text-muted-foreground peer-focus:top-2 peer-focus:text-sm peer-focus:text-primary transition-all duration-300">
@@ -335,7 +362,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   rows={10}
                   required
-                  disabled={status === 'sending'}
+                  disabled={status === "sending"}
                   className="peer w-full text-lg pt-8 pb-3 px-5 rounded-lg border border-input focus:border-primary focus:ring-2 focus:ring-ring/50 transition-all duration-300 placeholder-transparent disabled:bg-muted disabled:cursor-not-allowed hover:border-primary/50"
                 />
                 <label className="absolute left-5 top-2 text-sm text-muted-foreground peer-placeholder-shown:top-5 peer-placeholder-shown:text-lg peer-placeholder-shown:text-muted-foreground peer-focus:top-2 peer-focus:text-sm peer-focus:text-primary transition-all duration-300">
@@ -348,18 +375,20 @@ export default function ContactPage() {
               >
                 <motion.button
                   type="submit"
-                  disabled={status === 'sending'}
-                  whileHover={{ scale: status === 'sending' ? 1 : 1.05 }}
-                  whileTap={{ scale: status === 'sending' ? 1 : 0.97 }}
+                  disabled={status === "sending"}
+                  whileHover={{ scale: status === "sending" ? 1 : 1.05 }}
+                  whileTap={{ scale: status === "sending" ? 1 : 0.97 }}
                   className="group relative px-8 py-3 bg-neutral-900 border-2 border-white text-white rounded-full flex items-center gap-2 overflow-hidden transition-all duration-300 disabled:bg-muted disabled:text-muted-foreground disabled:cursor-not-allowed"
                 >
-                  {status === 'sending' ? (
+                  {status === "sending" ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 sm:h-5 sm:w-5 animate-spin" />
                     </>
                   ) : (
                     <>
-                      <span className="relative z-10 group-hover:text-black transition-colors duration-300">Send Message</span>
+                      <span className="relative z-10 group-hover:text-black transition-colors duration-300">
+                        Send Message
+                      </span>
                       <svg
                         className="w-4 h-4 sm:w-5 sm:h-5 transform group-hover:translate-x-1 transition-transform duration-200 relative z-10 group-hover:text-black"
                         fill="none"
@@ -379,7 +408,7 @@ export default function ContactPage() {
                   )}
                 </motion.button>
               </motion.div>
-              {status === 'success' && (
+              {status === "success" && (
                 <motion.div
                   className="flex items-center gap-2 text-sm p-4 bg-secondary rounded-lg"
                   variants={messageVariants}
@@ -387,7 +416,9 @@ export default function ContactPage() {
                   animate="visible"
                 >
                   <CheckCircle className="h-5 w-5 text-primary" />
-                  <p className="text-primary flex-1">Message sent successfully!</p>
+                  <p className="text-primary flex-1">
+                    Message sent successfully!
+                  </p>
                   <motion.button
                     onClick={dismissMessage}
                     className="text-muted-foreground hover:text-foreground"
@@ -398,7 +429,7 @@ export default function ContactPage() {
                   </motion.button>
                 </motion.div>
               )}
-              {status === 'error' && (
+              {status === "error" && (
                 <motion.div
                   className="flex items-center gap-2 text-sm p-4 bg-destructive/20 rounded-lg"
                   variants={messageVariants}
@@ -420,7 +451,7 @@ export default function ContactPage() {
             </form>
           </motion.div>
         </motion.div>
-        {status === 'sending' && (
+        {status === "sending" && (
           <motion.div
             className="absolute inset-0 bg-background/50 backdrop-blur-sm flex items-center justify-center"
             variants={loaderVariants}
@@ -441,7 +472,8 @@ export default function ContactPage() {
         viewport={{ once: true }}
       >
         <p className="text-sm text-muted-foreground">
-          We aim to respond to all inquiries within 24 hours. Thank you for reaching out!
+          We aim to respond to all inquiries within 24 hours. Thank you for
+          reaching out!
         </p>
       </motion.div>
     </div>

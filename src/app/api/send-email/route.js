@@ -14,8 +14,8 @@ export async function POST(req) {
     }
 
     const data = await resend.emails.send({
-      from: 'Your Company <onboarding@resend.dev>', // Update with your verified domain for production
-      to: 'shadyjosephabadeer2003@gmail.com',
+      from: 'qline-eg.com',
+      to: 'Emad.h.sarofeem@gmail.com',
       subject: `New message from ${name}`,
       html: `
         <p><strong>Name:</strong> ${name}</p>
