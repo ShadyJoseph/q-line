@@ -183,13 +183,15 @@ export default function ContactPage() {
       >
         <motion.h1
           variants={itemVariants}
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-foreground tracking-tight mb-4 px-4"
+          className="text-4xl sm:text-5xl font-bold text-black mb-4 px-4"
         >
           Contact Us
         </motion.h1>
+        <div className="hidden sm:block w-24 h-1 bg-black mx-auto mb-2"></div>
+        <div className="block sm:hidden w-16 h-1 bg-black mx-auto mb-2"></div>
         <motion.p
           variants={itemVariants}
-          className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto px-4"
+          className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4"
         >
           We're here to help. Reach out via form, email, or phone.
         </motion.p>
@@ -349,9 +351,9 @@ export default function ContactPage() {
                 <motion.button
                   type="submit"
                   disabled={status === 'sending'}
-                  whileHover={{ scale: status === 'sending' ? 1 : 1.03 }}
-                  whileTap={{ scale: status === 'sending' ? 1 : 0.98 }}
-                  className="relative px-6 py-2 bg-foreground text-white border border-foreground rounded-radius-sm font-medium text-base sm:text-lg shadow-sm hover:bg-white hover:text-foreground hover:border-foreground transition-all duration-200 flex items-center gap-2 overflow-hidden group disabled:bg-muted disabled:text-muted-foreground disabled:cursor-not-allowed"
+                  whileHover={{ scale: status === 'sending' ? 1 : 1.05 }}
+                  whileTap={{ scale: status === 'sending' ? 1 : 0.97 }}
+                  className="group relative px-8 py-3 bg-neutral-900 border-2 border-white text-white rounded-full flex items-center gap-2 overflow-hidden transition-all duration-300 disabled:bg-muted disabled:text-muted-foreground disabled:cursor-not-allowed"
                 >
                   {status === 'sending' ? (
                     <>
@@ -359,9 +361,9 @@ export default function ContactPage() {
                     </>
                   ) : (
                     <>
-                      <span className="relative z-10">Send Message</span>
+                      <span className="relative z-10 group-hover:text-black transition-colors duration-300">Send Message</span>
                       <svg
-                        className="w-4 h-4 sm:w-5 sm:h-5 transform group-hover:translate-x-1 transition-transform duration-200 relative z-10"
+                        className="w-4 h-4 sm:w-5 sm:h-5 transform group-hover:translate-x-1 transition-transform duration-200 relative z-10 group-hover:text-black"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -374,6 +376,7 @@ export default function ContactPage() {
                           d="M9 5l7 7-7 7"
                         />
                       </svg>
+                      <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                     </>
                   )}
                 </motion.button>
