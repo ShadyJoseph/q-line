@@ -252,14 +252,14 @@ export default function ContactPage() {
                   </span>
                   <motion.button
                     onClick={() =>
-                      copyToClipboard("support@example.com", "email")
+                      copyToClipboard("Emad.h.sarofeem@gmail.com", "email")
                     }
                     className="flex items-center gap-2 text-foreground hover:text-primary transition-colors relative group"
                     title="Copy email"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    support@example.com
+                    Emad.h.sarofeem@gmail.com
                     {copiedEmail ? (
                       <Check className="h-4 w-4 text-primary" />
                     ) : (
@@ -289,14 +289,14 @@ export default function ContactPage() {
                   </span>
                   <motion.button
                     onClick={() =>
-                      copyToClipboard("+1 (555) 123-4567", "phone")
+                      copyToClipboard("+20 100 501 8500", "phone")
                     }
                     className="flex items-center gap-2 text-foreground hover:text-primary transition-colors relative group"
                     title="Copy phone number"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    +1 (555) 123-4567
+                    +20 100 501 8500
                     {copiedPhone ? (
                       <Check className="h-4 w-4 text-primary" />
                     ) : (
