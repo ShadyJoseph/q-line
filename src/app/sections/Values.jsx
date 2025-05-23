@@ -134,7 +134,7 @@ export default function Values() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-black transition-all duration-300 flex flex-col items-center text-center"
+              className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-black transition-all duration-300 flex flex-col items-center text-center group"
             >
               <div className="text-black mb-4 flex justify-center">
                 {value.icon}

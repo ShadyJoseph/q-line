@@ -188,3 +188,11 @@ html,
 body {
   overflow-x: hidden;
 }
+
+@media (max-width: 1023px) {
+
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: 315px !important;
+  }
+}

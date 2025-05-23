@@ -92,7 +92,7 @@ export default function StoryandBack() {
             className="text-base text-gray-800 leading-relaxed mb-4 text-center"
           >
             Q-Line Print began with a vision to simplify printing for businesses
-            and schools. As an award-winning, family-owned company, we’ve built
+            and schools. As an award-winning, family-owned company, we've built
             a reputation for quality and innovation, delivering tailored design
             and printing solutions across the nation.
           </motion.p>
@@ -117,7 +117,7 @@ export default function StoryandBack() {
               className="col-span-2 h-44 rounded-xl overflow-hidden shadow-md"
             >
               <img
-                src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+                src="/images/OurStory1.jpg"
                 alt="Workspace 1"
                 className="w-full h-full object-cover"
                 loading="eager"
@@ -130,7 +130,7 @@ export default function StoryandBack() {
               className="h-32 rounded-xl overflow-hidden shadow-md"
             >
               <img
-                src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+                src="/images/OurStory2.jpg"
                 alt="Workspace 2"
                 className="w-full h-full object-cover"
                 loading="eager"
@@ -143,7 +143,7 @@ export default function StoryandBack() {
               className="h-32 rounded-xl overflow-hidden shadow-md"
             >
               <img
-                src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+                src="/images/OurStory3.jpg"
                 alt="Workspace 3"
                 className="w-full h-full object-cover"
                 loading="eager"
@@ -178,7 +178,7 @@ export default function StoryandBack() {
             className="text-base text-gray-800 leading-relaxed mb-4 text-center"
           >
             Our team thrives in a collaborative environment, working closely
-            with clients to turn ideas into reality. Whether it’s a school
+            with clients to turn ideas into reality. Whether it's a school
             textbook or a marketing brochure, we ensure every project shines.
           </motion.p>
           {/* Cool 3-image layout */}
@@ -193,7 +193,7 @@ export default function StoryandBack() {
               className="col-span-2 h-44 rounded-xl overflow-hidden shadow-md"
             >
               <img
-                src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+                src="/images/OurWorkplace3.jpg"
                 alt="Workspace 1"
                 className="w-full h-full object-cover"
                 loading="eager"
@@ -206,7 +206,7 @@ export default function StoryandBack() {
               className="h-32 rounded-xl overflow-hidden shadow-md"
             >
               <img
-                src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+                src="/images/OurWorkplace2.jpg"
                 alt="Workspace 2"
                 className="w-full h-full object-cover"
                 loading="eager"
@@ -219,7 +219,7 @@ export default function StoryandBack() {
               className="h-32 rounded-xl overflow-hidden shadow-md"
             >
               <img
-                src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+                src="/images/OurWorkplace1.jpg"
                 alt="Workspace 3"
                 className="w-full h-full object-cover"
                 loading="eager"
@@ -289,7 +289,7 @@ export default function StoryandBack() {
                   className="relative h-48 sm:h-56 w-full overflow-hidden rounded-lg"
                 >
                   <img
-                    src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+                    src="/images/OurStory1.jpg"
                     alt="Workspace 1"
                     className="w-full h-full object-cover"
                     loading="eager"
@@ -302,7 +302,7 @@ export default function StoryandBack() {
                   className="relative h-48 sm:h-56 w-full overflow-hidden rounded-lg"
                 >
                   <img
-                    src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+                    src="/images/OurStory2.jpg"
                     alt="Punch Today"
                     className="w-full h-full object-cover"
                     loading="eager"
@@ -317,7 +317,7 @@ export default function StoryandBack() {
                 className="flex-1 relative h-100 sm:h-[29rem] w-full overflow-hidden rounded-lg"
               >
                 <img
-                  src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+                  src="/images/OurStory3.jpg"
                   alt="Plant"
                   className="w-full h-full object-cover"
                   loading="eager"
@@ -345,7 +345,7 @@ export default function StoryandBack() {
                 className="flex-1 relative h-100 sm:h-[29rem] w-full overflow-hidden rounded-lg"
               >
                 <img
-                  src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+                  src="/images/OurStory1.jpg"
                   alt="Team 3"
                   className="w-full h-full object-cover"
                   loading="eager"
@@ -360,7 +360,7 @@ export default function StoryandBack() {
                   className="relative h-48 sm:h-56 w-full overflow-hidden rounded-lg"
                 >
                   <img
-                    src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+                    src="/images/OurStory2.jpg"
                     alt="Team 1"
                     className="w-full h-full object-cover"
                     loading="eager"
@@ -373,7 +373,7 @@ export default function StoryandBack() {
                   className="relative h-48 sm:h-56 w-full overflow-hidden rounded-lg"
                 >
                   <img
-                    src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg"
+                    src="/images/OurStory3.jpg"
                     alt="Team 2"
                     className="w-full h-full object-cover"
                     loading="eager"
@@ -395,7 +395,7 @@ export default function StoryandBack() {
                 </p>
                 <p className="text-base sm:text-lg text-gray-800 leading-relaxed">
                   Our collaborative team works hand-in-hand with clients,
-                  turning ideas into reality. Whether it’s a school textbook or
+                  turning ideas into reality. Whether it's a school textbook or
                   a marketing campaign, we deliver results that make an impact.
                 </p>
               </div>

@@ -177,7 +177,7 @@ export default function ServicesSection() {
                 </SwiperSlide>
               );
             })}
-            <div className="flex justify-center items-center gap-4 mt-8 relative z-20">
+            <div className="flex justify-center items-center gap-4 mt-8 relative z-20 hidden lg:flex">
               <div className="swiper-button-prev !text-white after:!content-[''] !w-10 !h-10 bg-black !rounded-full !shadow-lg hover:scale-110 transition-all duration-200 flex items-center justify-center">
                 <svg
                   className="w-5 h-5"

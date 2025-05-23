@@ -113,8 +113,8 @@ const MapAnimations = ({ children }) => {
                         className="text-lg sm:text-xl lg:text-2xl text-gray-700 dark:text-gray-200 font-medium"
                         style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
                     >
-                        8 Khaled Ibn Al Walid, Sheraton Al Matar, El Nozha, <br />
-                        Cairo Governorate 4471141, Egypt
+                        24-A El Obour Buildings, Salah Salem Street, Manshiyet El Bakri, <br />
+                        Heliopolis, Cairo Governorate 4471141, Egypt
                     </p>
                 </motion.div>
             </div>
