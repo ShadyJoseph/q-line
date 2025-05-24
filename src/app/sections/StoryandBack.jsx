@@ -112,20 +112,21 @@ export default function StoryandBack() {
           >
             <motion.div
               variants={imageVariants}
-              whileHover={{ scale: 1.03 }}
+              whileHover={{ scale: 1 }}
               transition={{ duration: 0.3 }}
               className="col-span-2 h-44 rounded-xl overflow-hidden shadow-md"
             >
               <img
-                src="/images/OurStory1.jpg"
+                src="/images/OurStory3.jpg"
                 alt="Workspace 1"
                 className="w-full h-full object-cover"
+                style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
                 loading="eager"
               />
             </motion.div>
             <motion.div
               variants={imageVariants}
-              whileHover={{ scale: 1.03 }}
+              whileHover={{ scale: 1 }}
               transition={{ duration: 0.3 }}
               className="h-32 rounded-xl overflow-hidden shadow-md"
             >
@@ -133,19 +134,21 @@ export default function StoryandBack() {
                 src="/images/OurStory2.jpg"
                 alt="Workspace 2"
                 className="w-full h-full object-cover"
+                style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
                 loading="eager"
               />
             </motion.div>
             <motion.div
               variants={imageVariants}
-              whileHover={{ scale: 1.03 }}
+              whileHover={{ scale: 1 }}
               transition={{ duration: 0.3 }}
               className="h-32 rounded-xl overflow-hidden shadow-md"
             >
               <img
-                src="/images/OurStory3.jpg"
+                src="/images/OurStory1.jpg"
                 alt="Workspace 3"
                 className="w-full h-full object-cover"
+                style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
                 loading="eager"
               />
             </motion.div>
@@ -188,20 +191,21 @@ export default function StoryandBack() {
           >
             <motion.div
               variants={imageVariants}
-              whileHover={{ scale: 1.03 }}
+              whileHover={{ scale: 1 }}
               transition={{ duration: 0.3 }}
               className="col-span-2 h-44 rounded-xl overflow-hidden shadow-md"
             >
               <img
-                src="/images/OurWorkplace3.jpg"
+                src="/images/OurWorkplace1.jpg"
                 alt="Workspace 1"
                 className="w-full h-full object-cover"
+                style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
                 loading="eager"
               />
             </motion.div>
             <motion.div
               variants={imageVariants}
-              whileHover={{ scale: 1.03 }}
+              whileHover={{ scale: 1 }}
               transition={{ duration: 0.3 }}
               className="h-32 rounded-xl overflow-hidden shadow-md"
             >
@@ -209,19 +213,21 @@ export default function StoryandBack() {
                 src="/images/OurWorkplace2.jpg"
                 alt="Workspace 2"
                 className="w-full h-full object-cover"
+                style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
                 loading="eager"
               />
             </motion.div>
             <motion.div
               variants={imageVariants}
-              whileHover={{ scale: 1.03 }}
+              whileHover={{ scale: 1 }}
               transition={{ duration: 0.3 }}
               className="h-32 rounded-xl overflow-hidden shadow-md"
             >
               <img
-                src="/images/OurWorkplace1.jpg"
+                src="/images/OurWorkplace3.jpg"
                 alt="Workspace 3"
                 className="w-full h-full object-cover"
+                style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
                 loading="eager"
               />
             </motion.div>
@@ -284,27 +290,29 @@ export default function StoryandBack() {
               <div className="flex-1 flex flex-col gap-4">
                 <motion.div
                   variants={imageVariants}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                  className="relative h-48 sm:h-56 w-full overflow-hidden rounded-lg"
-                >
-                  <img
-                    src="/images/OurStory1.jpg"
-                    alt="Workspace 1"
-                    className="w-full h-full object-cover"
-                    loading="eager"
-                  />
-                </motion.div>
-                <motion.div
-                  variants={imageVariants}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1 }}
                   transition={{ duration: 0.3 }}
                   className="relative h-48 sm:h-56 w-full overflow-hidden rounded-lg"
                 >
                   <img
                     src="/images/OurStory2.jpg"
+                    alt="Workspace 1"
+                    className="w-full h-full object-cover"
+                    style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+                    loading="eager"
+                  />
+                </motion.div>
+                <motion.div
+                  variants={imageVariants}
+                  whileHover={{ scale: 1 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative h-48 sm:h-56 w-full overflow-hidden rounded-lg"
+                >
+                  <img
+                    src="/images/OurStory3.jpg"
                     alt="Punch Today"
                     className="w-full h-full object-cover"
+                    style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
                     loading="eager"
                   />
                 </motion.div>
@@ -312,12 +320,12 @@ export default function StoryandBack() {
               {/* Single 1x1 Image */}
               <motion.div
                 variants={imageVariants}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1 }}
                 transition={{ duration: 0.3 }}
                 className="flex-1 relative h-100 sm:h-[29rem] w-full overflow-hidden rounded-lg"
               >
                 <img
-                  src="/images/OurStory3.jpg"
+                  src="/images/OurStory1.jpg"
                   alt="Plant"
                   className="w-full h-full object-cover"
                   loading="eager"
@@ -340,12 +348,12 @@ export default function StoryandBack() {
               {/* Single 1x1 Image */}
               <motion.div
                 variants={imageVariants}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1 }}
                 transition={{ duration: 0.3 }}
                 className="flex-1 relative h-100 sm:h-[29rem] w-full overflow-hidden rounded-lg"
               >
                 <img
-                  src="/images/OurStory1.jpg"
+                  src="/images/OurWorkplace3.jpg"
                   alt="Team 3"
                   className="w-full h-full object-cover"
                   loading="eager"
@@ -355,12 +363,12 @@ export default function StoryandBack() {
               <div className="flex-1 flex flex-col gap-4">
                 <motion.div
                   variants={imageVariants}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1 }}
                   transition={{ duration: 0.3 }}
                   className="relative h-48 sm:h-56 w-full overflow-hidden rounded-lg"
                 >
                   <img
-                    src="/images/OurStory2.jpg"
+                    src="/images/OurWorkplace2.jpg"
                     alt="Team 1"
                     className="w-full h-full object-cover"
                     loading="eager"
@@ -368,12 +376,12 @@ export default function StoryandBack() {
                 </motion.div>
                 <motion.div
                   variants={imageVariants}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1 }}
                   transition={{ duration: 0.3 }}
                   className="relative h-48 sm:h-56 w-full overflow-hidden rounded-lg"
                 >
                   <img
-                    src="/images/OurStory3.jpg"
+                    src="/images/OurWorkplace1.jpg"
                     alt="Team 2"
                     className="w-full h-full object-cover"
                     loading="eager"
