@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import dynamic from 'next/dynamic';
-
 const NavBar = dynamic(() => import('./sections/NavBar'), {
   ssr: false,
 });
@@ -13,7 +12,7 @@ const Footer = dynamic(() => import('./sections/Footer'), {
   ssr: false,
 });
 
-const ShowButtonUp = dynamic(() => import('./components/ShowButtonUp'), {
+const ShowButtonUp = dynamic(() => import('@/components/ShowButtonUp'), {
   ssr: false,
 });
 

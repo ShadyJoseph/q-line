@@ -67,7 +67,7 @@ const OurTeam = () => {
           transition={{ duration: 0.5 }}
         >
           <h1 className="text-4xl font-bold text-black mb-4">
-            Meet the Q-Line Print Team
+            Meet the Ceo Emad
           </h1>
           <p className="text-gray-600 mb-8">
             Our award-winning team at Q-Line Print delivers innovative printing

@@ -4,7 +4,7 @@ import Item from './Item';
 import { motion } from 'framer-motion';
 
 const Scroller = () => {
-  const images = Array.from({ length: 8 }, (_, i) => ({
+  const images = Array.from({ length: 10 }, (_, i) => ({
     id: i + 1,
     src: `/images/img${i + 1}.png`,
     alt: `Image ${i + 1}`

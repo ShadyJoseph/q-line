@@ -206,8 +206,8 @@ const PrivacyPolicy = () => {
                     </p>
                     <ul className="list-disc pl-6 space-y-1">
                       {[
-                        "Emad.h.sarofeem@gmail.com",
-                        "+1 (800) 555-1234",
+                        "emad.hanna@qline-eg.com",
+                        "+20 100 501 8500",
                         "Heliopolis, Cairo",
                       ].map((item, index) => (
                         <motion.li

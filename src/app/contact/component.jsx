@@ -252,14 +252,14 @@ export default function ContactPage() {
                   </span>
                   <motion.button
                     onClick={() =>
-                      copyToClipboard("Emad.h.sarofeem@gmail.com", "email")
+                      copyToClipboard("emad.hanna@qline-eg.com", "email")
                     }
                     className="flex items-center gap-2 text-foreground hover:text-primary transition-colors relative group"
                     title="Copy email"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    Emad.h.sarofeem@gmail.com
+                    emad.hanna@qline-eg.com
                     {copiedEmail ? (
                       <Check className="h-4 w-4 text-primary" />
                     ) : (
