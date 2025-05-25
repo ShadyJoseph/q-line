@@ -57,11 +57,26 @@ const MeetTheCeo = () => {
                             </h3>
                             <div className="space-y-6 text-center md:text-left">
                                 <p className="text-gray-600 leading-relaxed">
-                                    Emad Hanna is a seasoned professional with over 23 years of experience in account management, service delivery, and operations, specializing in document outsourcing and printing technologies. With a strong background at Xerox Egypt, he has excelled in roles such as Service Delivery Manager and Operations Manager, where he developed strategic plans, negotiated contracts, and ensured compliance with quality standards across industries like banking, telecommunications, and IT. Emad is skilled in cost control, vendor management, and team leadership, with hands-on expertise in offset/digital printing, advertising media, and exhibition logistics. Fluent in English and Arabic, he combines technical proficiency with a customer-centric approach to drive efficiency and profitability. Outside work, Emad enjoys football, cooking, and traveling, reflecting his dynamic and versatile personality.
+                                    <span>
+                                        Emad Hanna brings over <strong>two decades of leadership and innovation</strong> to the table, with deep expertise in
+                                        <strong> account management</strong>, <strong>service delivery</strong>, and <strong>operations</strong>—particularly in
+                                        <strong> document outsourcing</strong> and <strong>printing technologies</strong>. His impressive career at
+                                        <strong> Xerox Egypt</strong> saw him thrive in key roles like <strong>Service Delivery Manager</strong> and
+                                        <strong> Operations Manager</strong>, where he led <strong>strategic planning</strong>, <strong>streamlined operations</strong>,
+                                        and ensured <strong>top-tier quality</strong> across sectors such as <strong>banking</strong>, <strong>telecom</strong>, and
+                                        <strong> IT</strong>. Emad is known for his strong command of <strong>cost control</strong>, <strong>vendor partnerships</strong>,
+                                        and <strong>team leadership</strong>. With hands-on knowledge in <strong>offset and digital printing</strong> ,
+                                        <strong>advertising media</strong>, and <strong> exhibition logistics</strong>, he pairs <strong>technical know-how</strong>
+                                        with a sharp focus on <strong>customer satisfaction</strong>—consistently driving <strong>growth</strong>,
+                                        <strong> efficiency</strong>, and <strong>results</strong>.
+                                        With a solid foundation in both <strong>strategy and execution</strong>, Emad Hanna combines <strong>technical expertise </strong>
+                                        with <strong>strong leadership</strong> to deliver <strong>measurable impact</strong>. His background spans
+                                        <strong> high-pressure industries</strong> where he has <strong>optimized workflows</strong>, built
+                                        <strong> strong client relationships</strong>, and led <strong>cross-functional teams</strong>—all while maintaining a commitment
+                                        to <strong>excellence</strong> and <strong>innovation</strong>.
+                                    </span>
                                 </p>
-                                <p className="text-gray-600 leading-relaxed">
-                                    Emad Hanna is a seasoned professional with over 23 years of experience in account management, service delivery, and operations, specializing in document outsourcing and printing technologies.
-                                </p>
+
                             </div>
                         </motion.div>
                     </div>
