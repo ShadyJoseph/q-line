@@ -120,7 +120,11 @@ export default function StoryandBack() {
                 src="/images/OurStory3.jpg"
                 alt="Workspace 1"
                 className="w-full h-full object-cover"
-                style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+                style={{
+                  imageRendering: "auto",
+                  backfaceVisibility: "hidden",
+                  transform: "translateZ(0)",
+                }}
                 loading="eager"
               />
             </motion.div>
@@ -134,7 +138,11 @@ export default function StoryandBack() {
                 src="/images/OurStory2.jpg"
                 alt="Workspace 2"
                 className="w-full h-full object-cover"
-                style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+                style={{
+                  imageRendering: "auto",
+                  backfaceVisibility: "hidden",
+                  transform: "translateZ(0)",
+                }}
                 loading="eager"
               />
             </motion.div>
@@ -148,7 +156,11 @@ export default function StoryandBack() {
                 src="/images/OurStory1.jpg"
                 alt="Workspace 3"
                 className="w-full h-full object-cover"
-                style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+                style={{
+                  imageRendering: "auto",
+                  backfaceVisibility: "hidden",
+                  transform: "translateZ(0)",
+                }}
                 loading="eager"
               />
             </motion.div>
@@ -199,7 +211,11 @@ export default function StoryandBack() {
                 src="/images/OurWorkplace1.jpg"
                 alt="Workspace 1"
                 className="w-full h-full object-cover"
-                style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+                style={{
+                  imageRendering: "auto",
+                  backfaceVisibility: "hidden",
+                  transform: "translateZ(0)",
+                }}
                 loading="eager"
               />
             </motion.div>
@@ -213,7 +229,11 @@ export default function StoryandBack() {
                 src="/images/OurWorkplace2.jpg"
                 alt="Workspace 2"
                 className="w-full h-full object-cover"
-                style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+                style={{
+                  imageRendering: "auto",
+                  backfaceVisibility: "hidden",
+                  transform: "translateZ(0)",
+                }}
                 loading="eager"
               />
             </motion.div>
@@ -227,7 +247,11 @@ export default function StoryandBack() {
                 src="/images/OurWorkplace3.jpg"
                 alt="Workspace 3"
                 className="w-full h-full object-cover"
-                style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+                style={{
+                  imageRendering: "auto",
+                  backfaceVisibility: "hidden",
+                  transform: "translateZ(0)",
+                }}
                 loading="eager"
               />
             </motion.div>
@@ -298,7 +322,11 @@ export default function StoryandBack() {
                     src="/images/OurStory2.jpg"
                     alt="Workspace 1"
                     className="w-full h-full object-cover"
-                    style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+                    style={{
+                      imageRendering: "auto",
+                      backfaceVisibility: "hidden",
+                      transform: "translateZ(0)",
+                    }}
                     loading="eager"
                   />
                 </motion.div>
@@ -312,7 +340,11 @@ export default function StoryandBack() {
                     src="/images/OurStory3.jpg"
                     alt="Punch Today"
                     className="w-full h-full object-cover"
-                    style={{ imageRendering: 'auto', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
+                    style={{
+                      imageRendering: "auto",
+                      backfaceVisibility: "hidden",
+                      transform: "translateZ(0)",
+                    }}
                     loading="eager"
                   />
                 </motion.div>

@@ -32,19 +32,19 @@ const Footer = () => {
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="/contact"
+                    href="/about"
                     className="text-gray-600 hover:text-black transition-colors duration-300 inline-block relative group"
                   >
-                    Contact Us
+                    About
                     <span className="absolute bottom-0 left-0 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/about"
+                    href="/contact"
                     className="text-gray-600 hover:text-black transition-colors duration-300 inline-block relative group"
                   >
-                    About
+                    Contact Us
                     <span className="absolute bottom-0 left-0 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                   </a>
                 </li>
@@ -81,9 +81,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-600">
-              © 2024 Q-Line. All rights reserved.
-            </p>
+            <p className="text-gray-600">© 2024 Q-Line. All rights reserved.</p>
             <div className="flex ">
               <a
                 href="https://www.linkedin.com/company/q-line-print"
